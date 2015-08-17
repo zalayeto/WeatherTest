@@ -1,0 +1,64 @@
+﻿@using _4ComVacancy.WeatherTest.MicroFramework.Api.Weather
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/angular.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/angular-app/weatherTestApp.js")" type="text/javascript"></script>
+}
+
+<div ng-app="weatherTestApp" ng-controller="mainController" ng-init="init('@TemperatureUnits.Celsius','@WindUnits.KPHs')">
+
+    <div id="formContainer">
+        <form id="weatherForm" ng-submit="getWeather()">
+            <div class="field">
+                <div class="label">
+                    <label>Enter location</label>
+                </div>
+                <div class="input">
+                    <input type="text" ng-model="location" required ng-change="reset()"/>
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">
+                    <label>Select temperature unit</label>
+                </div>
+                <div class="input">
+                    <span>@TemperatureUnits.Celsius.ToString()</span><input type="radio" ng-model="temperatureUnit" name="temperatureUnit" ng-change="reset()" value="@TemperatureUnits.Celsius" />
+                    <span>@TemperatureUnits.Farenheits.ToString()</span><input type="radio" ng-model="temperatureUnit" name="temperatureUnit" ng-change="reset()" value="@TemperatureUnits.Farenheits" />
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">
+                    <label>Select wind unit</label>
+                </div>
+                <div class="input">
+                    <span>@WindUnits.KPHs.ToString()</span><input type="radio" ng-model="windUnit" name="windUnit" ng-change="reset()" value="@WindUnits.KPHs"/>
+                    <span>@WindUnits.MPHs.ToString()</span><input type="radio" ng-model="windUnit" name="windUnit" ng-change="reset()" value="@WindUnits.MPHs" />
+
+                </div>
+            </div>
+            <input type="submit" value="Get weather" />
+        </form>
+    </div>
+
+    <div id="resultContainer" ng-if="tempValue!=null || windValue!=null">
+        <div>
+            <h2>Temperature</h2>
+            <div>
+                <span>{{ tempValue }} {{ temperatureUnit }}</span>
+            </div>
+        </div>
+        <div>
+            <h2>Wind</h2>
+            <div>
+                <span>{{ windValue }} {{ windUnit }}</span>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
