@@ -186,11 +186,11 @@
     <None Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\4ComVacancy.WeatherTest.MicroFramework\4ComVacancy.WeatherTest.MicroFramework.csproj">
+    <ProjectReference Include="..\..\src\4ComVacancy.WeatherTest.MicroFramework\4ComVacancy.WeatherTest.MicroFramework.csproj">
       <Project>{cfce7a36-b997-4e96-902e-ee22d5c0e4fb}</Project>
       <Name>4ComVacancy.WeatherTest.MicroFramework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\4ComVacancy.WeatherTest.Web\4ComVacancy.WeatherTest.Web.csproj">
+    <ProjectReference Include="..\..\src\4ComVacancy.WeatherTest.Web\4ComVacancy.WeatherTest.Web.csproj">
       <Project>{52CFFB04-DD12-4F51-9CF2-41676CE6281E}</Project>
       <Name>4ComVacancy.WeatherTest.Web</Name>
     </ProjectReference>

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4ComVacancy.WeatherTest.Web", "4ComVacancy.WeatherTest.Web\4ComVacancy.WeatherTest.Web.csproj", "{52CFFB04-DD12-4F51-9CF2-41676CE6281E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4ComVacancy.WeatherTest.Web", "src\4ComVacancy.WeatherTest.Web\4ComVacancy.WeatherTest.Web.csproj", "{52CFFB04-DD12-4F51-9CF2-41676CE6281E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4ComVacancy.WeatherTest.Web.Tests", "4ComVacancy.WeatherTest.Web.Tests\4ComVacancy.WeatherTest.Web.Tests.csproj", "{DA177E43-38C4-490C-94D8-7AF69F4FA594}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4ComVacancy.WeatherTest.Web.Tests", "test\4ComVacancy.WeatherTest.Web.Tests\4ComVacancy.WeatherTest.Web.Tests.csproj", "{DA177E43-38C4-490C-94D8-7AF69F4FA594}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4ComVacancy.WeatherTest.MicroFramework", "4ComVacancy.WeatherTest.MicroFramework\4ComVacancy.WeatherTest.MicroFramework.csproj", "{CFCE7A36-B997-4E96-902E-EE22D5C0E4FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4ComVacancy.WeatherTest.MicroFramework", "src\4ComVacancy.WeatherTest.MicroFramework\4ComVacancy.WeatherTest.MicroFramework.csproj", "{CFCE7A36-B997-4E96-902E-EE22D5C0E4FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4ComVacancy.WeatherTest.MicroFramework.Test", "4ComVacancy.WeatherTest.MicroFramework.Test\4ComVacancy.WeatherTest.MicroFramework.Test.csproj", "{1850801C-4D8C-4C00-80B0-2770CD659388}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4ComVacancy.WeatherTest.MicroFramework.Test", "test\4ComVacancy.WeatherTest.MicroFramework.Test\4ComVacancy.WeatherTest.MicroFramework.Test.csproj", "{1850801C-4D8C-4C00-80B0-2770CD659388}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B85B0FD2-C404-406D-B567-5013586BC619}"
 EndProject

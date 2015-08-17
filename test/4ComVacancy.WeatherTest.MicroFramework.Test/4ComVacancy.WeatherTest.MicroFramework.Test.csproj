@@ -100,11 +100,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\4ComVacancy.WeatherTest.MicroFramework\4ComVacancy.WeatherTest.MicroFramework.csproj">
+    <ProjectReference Include="..\..\src\4ComVacancy.WeatherTest.MicroFramework\4ComVacancy.WeatherTest.MicroFramework.csproj">
       <Project>{cfce7a36-b997-4e96-902e-ee22d5c0e4fb}</Project>
       <Name>4ComVacancy.WeatherTest.MicroFramework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\4ComVacancy.WeatherTest.Web\4ComVacancy.WeatherTest.Web.csproj">
+    <ProjectReference Include="..\..\src\4ComVacancy.WeatherTest.Web\4ComVacancy.WeatherTest.Web.csproj">
       <Project>{52cffb04-dd12-4f51-9cf2-41676ce6281e}</Project>
       <Name>4ComVacancy.WeatherTest.Web</Name>
     </ProjectReference>
