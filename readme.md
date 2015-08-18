@@ -2,7 +2,7 @@
 
 ## Goal
 
-Develop MVC 5 application that will show aggregated weather data to the user.
+Develop MVC 5 application that will show aggregated weather data to the user from a location.
 
 ## Requirements
 
@@ -10,10 +10,12 @@ From here: https://github.com/mattridgway/WeatherTest
 
 ## Design
 
-MVC 5 + WebApi 
-IoC : Unity
+MVC 5 + WebApi with Unity
+
 
 ### Key decisions
+
+  The decisions have been made keeping always in mind SOLID principles in order to design a solution that pontetially could grow much further that the current requirements.
 
   Create custom section 'weatherApi' in web.config that holds a list of 'api' in order to allow adding new apis easy as required.
   
@@ -21,11 +23,12 @@ IoC : Unity
   
   An instance of ApiWeatherManager will be in charge of receiving the call from the ApiController. This class contains a list of IWeatherApi with a method GetWeather, that returns a WeatherResult. The method will await until it has all the result from the calls to the different apis to calculate the average value with the unit required in every case.
   
-  The ApiWeatherManager creates the IWeatherApi with builder class, that receives the api configuration.
-   
    IWeatherApi is implemented by the class ApiWeatherHttpClient. This way, potentially we could include new types of client easily like FtpClient, TCPClient, etc.
+  
+  The ApiWeatherManager creates the IWeatherApi with a builder class instance(IApiWeatherHttpClientBuilder), that receives the api configuration, and will return a IWeatherApi instance. In this case, the builder will return ApiWeatherHttpClient, with the implementation of IHttpClient passed as a generic in the class definition. In this case, the IHttpClient is created through a factory leaving the design opened to include new kinds of HttpClient.
    
-
+  The IHttpClient only includes a property for the TimeOut and the method Get from an uri, returning an HttpClientResponse. Our implementation of IHttpClient is wrapper around System.Net.HttpClient.
+   
 ### Class diagram
 
 ![Alt text](/doc/class_diagram_weather_test.png "Class diagram")
