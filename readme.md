@@ -22,7 +22,7 @@ MVC 5 + WebApi with Unity and MVVM AngularJS in the client.
   
 - The method in the ApiController is executed Asynchronously. Although in this case we won't face problems like high concurrency, it is always a good practice, taking into account that we're doing use of resources that can be potentially slow and are out of our control. 
   
-- An instance of ApiWeatherManager will be in charge of receiving the call from the ApiController. This class contains a list of IWeatherApi with a method GetWeather, that returns a WeatherResult. The method will await until it has all the result from the calls to the different apis to calculate the average value with the unit required in every case.
+- An instance of ApiWeatherManager will be in charge of dealing with the call int the ApiController. This class contains a list of IWeatherApi which interface in turn offers a method GetWeather that returns a WeatherResult boject. The method will await until it has all the result from the calls to the different apis to calculate the average value with the unit required in every case. If some call has failed, the result is ignored.
   
 - IWeatherApi is implemented by the class ApiWeatherHttpClient. This way, potentially we could include new types of client easily like FtpClient, TCPClient, etc.
   
