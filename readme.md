@@ -82,7 +82,7 @@ For version details, please, see file package.config:
 
   Use experience improvement.
   
-  Error handling in ApiWeatherClient is only log to a file. 
+  Error handling in ApiWeatherClient is only logged to a file. Better handle could be done in the same way with every apiclient in case an error happens. Maybe return some information to the user as well with a mininum level of detail about the problem.
 
   Thorough testing for every of the component on the server side.
 
