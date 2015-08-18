@@ -10,8 +10,9 @@ From here: https://github.com/mattridgway/WeatherTest
 
 ## Design
 
-MVC 5 + WebApi with Unity
+### Architecture
 
+MVC 5 + WebApi with Unity and AngularJS in the client.
 
 ### Key decisions
 
@@ -45,6 +46,11 @@ The HttpApplication that holds both the MVC and Web Api implementations.
 
 Interfaces and classes required to implement the solution.
 
+Two namespaces:
+
+- WeatherTest.MicroFramework.Api: all classes and interfaces specifically related to the API.
+- WeatherTest.MicroFrawework.Http: infraestructure for IHttpClient component.
+
 ### Client
 
 Small angularJS application with one controller and one service to pull the data from the server. The angular project structure code doesn't follow best practices ( folders for controllers, services, views, etc) for simplicity.
@@ -53,7 +59,12 @@ The controller holds models for location, temperature unit and wind unit, and th
 
 ## Testing
 
+Two projects for testing, one for the web and another for the MicroFramework.
 
+In the MicroFrawework the focus for testing has been in two classes:
+  
+  ApiWeatherHttpClient: to ensure that if a valid response is received this is returned successfully in a WeatherResult.
+  ApiWeatherManager: to test that the result returned by the manager are coherent with the different scenarios on calling the api (all returning correct responses, one of the failing, all failing).
 
 ## Dependencies
 
@@ -65,11 +76,17 @@ For version details, please, see file package.config:
 - AngularJs for client side application.
 - NUnit, Moq and Moq.Secuences, Fluent Assertions for testing.
 
-
-
 ## Further work
 
-Client side unit testing with Jasmine.
+  The ApiManager could handle some cache in order to save calls to the apis and improve performance. In the same way could keep track of the availability to the different apis (200 response) and notify with a higher level than warning when an api is down x times in a row.
+
+  Use experience improvement.
+  
+  Error handling in ApiWeatherClient is only log to a file. 
+
+  Thorough testing for every of the component on the server side.
+
+  Client side unit testing with Jasmine.
 
 
 
