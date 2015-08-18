@@ -12,11 +12,11 @@ From here: https://github.com/mattridgway/WeatherTest
 
 ### Architecture
 
-MVC 5 + WebApi with Unity and AngularJS in the client.
+MVC 5 + WebApi with Unity and MVVM AngularJS in the client.
 
 ### Key decisions
 
-  First of all, it should be taken into account that the decisions have been made keeping always in mind SOLID principles in order to design a solution that potentially could grow much further that the current requirements.
+  It should be taken into account that the decisions have been made keeping always in mind SOLID principles in order to design a solution that potentially could grow much further that the current requirements.
 
 - Create custom section 'weatherApi' in web.config that holds a list of 'api' in order to allow adding new apis easy as required.
   
