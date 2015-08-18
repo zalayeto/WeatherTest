@@ -26,7 +26,7 @@ MVC 5 + WebApi with Unity and MVVM AngularJS in the client.
   
 - IWeatherApi is implemented by the class ApiWeatherHttpClient. This way, potentially, we could include new types of client easily like FtpClient, TCPClient, etc. to consume different types of apis, not only http.
   
-- The ApiWeatherManager creates each IWeatherApi with a builder class instance (IApiWeatherHttpClientBuilder), that receives the api configuration for the api, and will return a IWeatherApi instance. In this case, the builder will return ApiWeatherHttpClient, with the implementation of IHttpClient passed as a generic in the class definition. In this case, the IHttpClient is created through a factory leaving the design opened to include new kinds of HttpClient.
+- The ApiWeatherManager creates each IWeatherApi with a builder class instance (IApiWeatherHttpClientBuilder), that receives the api configuration for the api, and will return a IWeatherApi instance. In this case, the builder will return ApiWeatherHttpClient, with the implementation of IHttpClient passed as a generic in the class definition. In turn, the IHttpClient is created through a factory leaving the design opened to include new kinds of HttpClient and making easy to inject a IHttpClient implementation for testing purposes.
    
 - The IHttpClient only includes a property for the TimeOut and the method Get from an uri, returning an HttpClientResponse. Our implementation of IHttpClient is wrapper around System.Net.HttpClient.
    
