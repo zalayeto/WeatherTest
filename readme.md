@@ -20,7 +20,7 @@ MVC 5 + WebApi with Unity and MVVM AngularJS in the client.
 
 - Create custom section 'weatherApi' in web.config that holds a list of 'api' in order to allow adding new apis easy as required.
   
-- The method in the ApiController is executed Asynchronously. Although in this case we won't face problems like high concurrency, it is always a good practice, taking into account that we're doing use of resources that can be slow 
+- The method in the ApiController is executed Asynchronously. Although in this case we won't face problems like high concurrency, it is always a good practice, taking into account that we're doing use of resources that can be potentially slow and are out of our control. 
   
 - An instance of ApiWeatherManager will be in charge of receiving the call from the ApiController. This class contains a list of IWeatherApi with a method GetWeather, that returns a WeatherResult. The method will await until it has all the result from the calls to the different apis to calculate the average value with the unit required in every case.
   
