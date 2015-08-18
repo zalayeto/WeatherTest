@@ -15,8 +15,8 @@ IoC : Unity
 
 ### Key decisions
 
-- Create custom 'weatherApi' section that holds a list of 'api' in web.config in order to allow adding new apis easily.
-- 
+-- Create custom 'weatherApi' section that holds a list of 'api' in web.config in order to allow adding new apis easily.
+-- 
 
 ### Class diagram
 
